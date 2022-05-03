@@ -1,8 +1,8 @@
 {
-  "name": "index.js",
+  "name": "app.js",
   "version": "2.0.0-dev",
   "description": "project cloud architecture",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "dev-1.22CA"
   },
