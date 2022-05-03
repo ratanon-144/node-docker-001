@@ -2,7 +2,7 @@
   "name": "index.js",
   "version": "2.0.0-dev",
   "description": "project cloud architecture",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "dev-1.22CA"
   },
