@@ -1,9 +1,10 @@
 FROM node:16
+ENV NODE_ENV=production
 WORKDIR /usr/src/app
-COPY package.json package*.json ./
-##RUN npm install --only=production
-RUN npm install bcrypt cookie-session ejs express express-validator mysql2 nodemon
-##RUN npm install child_process
-##RUN npm install @google-cloud/storage
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm install --production --silent &&  npm install
 COPY . .
-CMD [ "npm", "start" ]
+EXPOSE 8080
+RUN chown -R node /usr/src/app
+USER node
+CMD ["node", "index.js"]
