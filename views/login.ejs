@@ -56,7 +56,9 @@
           
                           <% if (locals.login_errors) { 
                             login_errors.forEach(function(error_msg){ %>
-                            <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                            <div class="d-flex flex-row align-items-center mb-3">
+                                <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+                            </div>
                           <% });
                           } %>
                           <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
