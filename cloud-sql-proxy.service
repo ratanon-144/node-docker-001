@@ -7,6 +7,7 @@ Requires=networking.service
 After=networking.service
 
 [Service]
+RuntimeDirectory=cloud-sql-proxy
 Type=simple
 WorkingDirectory=/usr/local/bin
 ExecStart=/usr/local/bin/cloud_sql_proxy -dir=/var/run/cloud-sql-proxy -instances=japan-go-explore-348416:asia-southeast1:cloud-group-4=tcp:3306 -credential_file=/var/local/cloud_sql_proxy/japan-go-explore-348416-d7ae5f95520c.json
